@@ -10,7 +10,7 @@ export default {
         },
         neutral: {
           offWhite: "hsl(36,100%,99%)",
-          grayishBlue: "hsl(233, 8%, 97%)",
+          grayishBlue: "hsl(233, 8%, 79%)",
           darkGrayishBlue: "hsl(236,13%,42%)",
           darkBlue: "hsl(240, 100%, 5%)",
         },

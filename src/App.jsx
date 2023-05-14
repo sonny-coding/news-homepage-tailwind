@@ -1,4 +1,11 @@
-import { Icon, IconMenu, ImageWeb3Desktop } from "./assets";
+import {
+  Icon,
+  IconMenu,
+  ImageWeb3Desktop,
+  ImgRetro,
+  ImgGaming,
+  ImgLaptop,
+} from "./assets";
 import Button from "./components/Button";
 const App = () => {
   return (
@@ -29,10 +36,10 @@ const App = () => {
         </ul>
       </header>
 
-      <main className="w-full h-auto bg-neutral-grayishBlue md:grid md:grid-cols-3 md:gap-4 md:grid-rows-3">
+      <main className="w-full h-auto bg-neutral-offWhite md:grid md:grid-cols-3 md:gap-4 md:grid-rows-3">
         <div className="md:col-span-2 md:row-span-2 md:grid md:grid-col-2 md:grid-row-2 md:gap-4">
           <img className="md:col-span-2" src={ImageWeb3Desktop} alt="web 3" />
-          <div className="md:col-span-2 md:grid md:grid-cols-2">
+          <div className="md:col-span-2 md:grid md:grid-cols-2 md:gap-4">
             <p className="text-[56px] leading-none font-extrabold">
               The Bright Future of Web 3.0?
             </p>
@@ -46,21 +53,100 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="md:row-span-2">
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cupiditate
-          suscipit fugiat doloremque blanditiis iusto voluptatum ratione ipsam
-          et nemo quis pariatur ullam deleniti sequi ab voluptate culpa, quo
-          optio! Voluptas? Dolores ex exercitationem repellendus nihil, harum
-          dolorem voluptatibus? Culpa in eum necessitatibus suscipit inventore
-          accusantium voluptatibus quo facere, esse, ullam optio corporis
-          aspernatur explicabo! Animi numquam minus repellendus fugit
-          distinctio.
+        <div className="md:row-span-2 bg-neutral-darkBlue flex flex-col justify-start items-start gap-3 px-[24px] py-[32px]">
+          <div className="mb-5">
+            <p className="text-[40px] text-primary-softOrange hover:cursor-pointer">
+              New
+            </p>
+          </div>
+          <div className="text-neutral-offWhite">
+            <div className="border-b-[1px] border-neutral-grayishBlue pb-2 mb-2">
+              <p className="font-extrabold text-[20px] leading-6 text-neutral-offWhite hover:cursor-pointer hover:text-primary-softOrange">
+                Hydrogen VS Electric Cars
+              </p>
+              <p className="text-neutral-grayishBlue font-normal text-[15px] leading-[26px]">
+                Will Hydrogen-fueled cars ever catch up to EVs?
+              </p>
+            </div>
+            <div className="border-b-[1px] border-neutral-grayishBlue pb-2 mb-2">
+              <p className="font-extrabold text-[20px] leading-6 text-neutral-offWhite hover:cursor-pointer hover:text-primary-softOrange">
+                The Downsides of AI Artistry
+              </p>
+              <p className="text-neutral-grayishBlue font-normal text-[15px] leading-[26px]">
+                What are the possible adverse effects of on-demand AI image
+                generation?
+              </p>
+            </div>
+            <div className="">
+              <p className="font-extrabold text-[20px] leading-6 text-neutral-offWhite hover:cursor-pointer hover:text-primary-softOrange">
+                Is VC Funding Drying Up?
+              </p>
+              <p className="text-neutral-grayishBlue font-normal text-[15px] leading-[26px]">
+                Private funding by VC firms is down 50% YOY. We take a look at
+                what that means?
+              </p>
+            </div>
+          </div>
         </div>
-        <div className="md:col-span-3">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa laborum
-          doloribus accusamus, voluptate ea voluptatibus maxime ad. Mollitia
-          temporibus perspiciatis nostrum quidem quod numquam corporis. Corporis
-          quae culpa maiores dicta!
+        <div className="md:col-span-1 flex justify-center items-start">
+          <div className="min-w-[100px] max-w-[150px] min-h-[127px]">
+            <img
+              className="w-full h-full object-cover"
+              src={ImgRetro}
+              alt="retro gaming"
+            />
+          </div>
+          <div className="ml-2">
+            <p className="font-bold text-[32px] leading-none text-neutral-grayishBlue">
+              01
+            </p>
+            <p className="font-extrabold text-[18px] leading-[24px] text-neutral-darkBlue hover:cursor-pointer hover:text-primary-softRed">
+              Reviving Retro PCs
+            </p>
+            <p className="font-normal text-[15px] leading-[26px] text-neutral-darkGrayishBlue">
+              What happens when old PCs are given modern upgrade?
+            </p>
+          </div>
+        </div>
+        <div className="md:col-span-1 flex justify-center items-start">
+          <div className="min-w-[100px] max-w-[150px] min-h-[127px]">
+            <img
+              className="w-full h-full object-cover"
+              src={ImgLaptop}
+              alt="retro gaming"
+            />
+          </div>
+          <div className="ml-2">
+            <p className="font-bold text-[32px] leading-none text-neutral-grayishBlue">
+              02
+            </p>
+            <p className="font-extrabold text-[18px] leading-[24px] text-neutral-darkBlue hover:cursor-pointer hover:text-primary-softRed">
+              Top 10 Laptops of 2022
+            </p>
+            <p className="font-normal text-[15px] leading-[26px] text-neutral-darkGrayishBlue">
+              Our best picks for various needs and budgets.
+            </p>
+          </div>
+        </div>
+        <div className="md:col-span-1 flex justify-center items-start">
+          <div className="min-w-[100px] max-w-[150px] min-h-[127px]">
+            <img
+              className="w-full h-full object-cover"
+              src={ImgGaming}
+              alt="retro gaming"
+            />
+          </div>
+          <div className="ml-2">
+            <p className="font-bold text-[32px] leading-none text-neutral-grayishBlue">
+              03
+            </p>
+            <p className="font-extrabold text-[18px] leading-[24px] text-neutral-darkBlue hover:cursor-pointer hover:text-primary-softRed">
+              The Growth of Gaming
+            </p>
+            <p className="font-normal text-[15px] leading-[26px] text-neutral-darkGrayishBlue">
+              How the pandemic has sparked fresh opportunities.
+            </p>
+          </div>
         </div>
       </main>
     </div>
