@@ -1,7 +1,10 @@
 const SecondaryContent = ({ index, img, title, description }) => {
   return (
-    <div key={index} className="md:col-span-1 flex justify-center items-start">
-      <div className="min-w-[100px] max-w-[150px] min-h-[127px]">
+    <div
+      key={index}
+      className="md:col-span-1 flex justify-start items-start my-1"
+    >
+      <div className="min-w-[99px] max-w-[100px] h-auto">
         <img
           className="w-full h-full object-cover"
           src={img}
