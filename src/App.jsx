@@ -1,41 +1,12 @@
-import {
-  Icon,
-  IconMenu,
-  ImageWeb3Desktop,
-  ImgRetro,
-  ImgGaming,
-  ImgLaptop,
-} from "./assets";
+import { useState } from "react";
+import { ImageWeb3Desktop, ImgRetro, ImgGaming, ImgLaptop } from "./assets";
+import Navbar from "./components/Navbar";
 import Button from "./components/Button";
 const App = () => {
+  const [sideNav, setSideNav] = useState(false);
   return (
-    <div className="font-inter text-[15px] relative flex justify-start items-center flex-col w-full min-h-screen px-[165px] pt-[90px]">
-      <header className="w-full flex justify-between items-center pb-[60px]">
-        <a href="#">
-          <Icon />
-        </a>
-        <a href="#">
-          <IconMenu className="md:hidden" />
-        </a>
-        <ul className="hidden md:flex gap-10 text-[15px] font-normal leading-6">
-          <li className="transition-all duration-75 hover:cursor-pointer hover:text-primary-softRed">
-            Home
-          </li>
-          <li className="transition-all duration-75 hover:cursor-pointer hover:text-primary-softRed">
-            New
-          </li>
-          <li className="transition-all duration-75 hover:cursor-pointer hover:text-primary-softRed">
-            Popular
-          </li>
-          <li className="transition-all duration-75 hover:cursor-pointer hover:text-primary-softRed">
-            Trending
-          </li>
-          <li className="transition-all duration-75 hover:cursor-pointer hover:text-primary-softRed">
-            Categories
-          </li>
-        </ul>
-      </header>
-
+    <div className="font-inter text-[15px] relative flex justify-start items-center flex-col w-full min-h-screen pt-[20px] px-[10px] md:px-[30px] md:pt-[60px] lg:px-[165px] lg:pt-[90px]">
+      <Navbar sideNav={sideNav} setSideNav={setSideNav} />
       <main className="w-full h-auto bg-neutral-offWhite md:grid md:grid-cols-3 md:gap-4 md:grid-rows-3">
         <div className="md:col-span-2 md:row-span-2 md:grid md:grid-col-2 md:grid-row-2 md:gap-4">
           <img className="md:col-span-2" src={ImageWeb3Desktop} alt="web 3" />
@@ -53,11 +24,9 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="md:row-span-2 bg-neutral-darkBlue flex flex-col justify-start items-start gap-3 px-[24px] py-[32px]">
-          <div className="mb-5">
-            <p className="text-[40px] text-primary-softOrange hover:cursor-pointer">
-              New
-            </p>
+        <div className="md:row-span-2 bg-neutral-darkBlue flex flex-col justify-start items-start gap-3 px-[24px] py-[32px] group">
+          <div className="mb-5 text-neutral-darkBlue group-hover:text-primary-softOrange">
+            <p className="text-[40px] text-inherit hover:cursor-pointer">New</p>
           </div>
           <div className="text-neutral-offWhite">
             <div className="border-b-[1px] border-neutral-grayishBlue pb-2 mb-2">
