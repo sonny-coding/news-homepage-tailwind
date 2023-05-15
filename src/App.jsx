@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { ImageWeb3Desktop, ImgRetro, ImgGaming, ImgLaptop } from "./assets";
+import { ImageWeb3Desktop, ImageWeb3Mobile } from "./assets";
 import Navbar from "./components/Navbar";
 import Button from "./components/Button";
+import SecondaryContent from "./components/SecondaryContent";
+import { secondaryContentData } from "./data";
 const App = () => {
   const [sideNav, setSideNav] = useState(false);
   return (
@@ -9,7 +11,12 @@ const App = () => {
       <Navbar sideNav={sideNav} setSideNav={setSideNav} />
       <main className="w-full h-auto bg-neutral-offWhite md:grid md:grid-cols-3 md:gap-4 md:grid-rows-3">
         <div className="md:col-span-2 md:row-span-2 md:grid md:grid-col-2 md:grid-row-2 md:gap-4">
-          <img className="md:col-span-2" src={ImageWeb3Desktop} alt="web 3" />
+          <img
+            className="md:col-span-2"
+            src={ImageWeb3Mobile}
+            srcSet={`${ImageWeb3Mobile} 800w, ${ImageWeb3Desktop} 1200w`}
+            alt="web 3"
+          />
           <div className="md:col-span-2 md:grid md:grid-cols-2 md:gap-4">
             <p className="text-[56px] leading-none font-extrabold">
               The Bright Future of Web 3.0?
@@ -57,66 +64,16 @@ const App = () => {
             </div>
           </div>
         </div>
-        <div className="md:col-span-1 flex justify-center items-start">
-          <div className="min-w-[100px] max-w-[150px] min-h-[127px]">
-            <img
-              className="w-full h-full object-cover"
-              src={ImgRetro}
-              alt="retro gaming"
+        {secondaryContentData.map((data) => {
+          return (
+            <SecondaryContent
+              index={data.index}
+              img={data.img}
+              title={data.title}
+              description={data.description}
             />
-          </div>
-          <div className="ml-2">
-            <p className="font-bold text-[32px] leading-none text-neutral-grayishBlue">
-              01
-            </p>
-            <p className="font-extrabold text-[18px] leading-[24px] text-neutral-darkBlue hover:cursor-pointer hover:text-primary-softRed">
-              Reviving Retro PCs
-            </p>
-            <p className="font-normal text-[15px] leading-[26px] text-neutral-darkGrayishBlue">
-              What happens when old PCs are given modern upgrade?
-            </p>
-          </div>
-        </div>
-        <div className="md:col-span-1 flex justify-center items-start">
-          <div className="min-w-[100px] max-w-[150px] min-h-[127px]">
-            <img
-              className="w-full h-full object-cover"
-              src={ImgLaptop}
-              alt="retro gaming"
-            />
-          </div>
-          <div className="ml-2">
-            <p className="font-bold text-[32px] leading-none text-neutral-grayishBlue">
-              02
-            </p>
-            <p className="font-extrabold text-[18px] leading-[24px] text-neutral-darkBlue hover:cursor-pointer hover:text-primary-softRed">
-              Top 10 Laptops of 2022
-            </p>
-            <p className="font-normal text-[15px] leading-[26px] text-neutral-darkGrayishBlue">
-              Our best picks for various needs and budgets.
-            </p>
-          </div>
-        </div>
-        <div className="md:col-span-1 flex justify-center items-start">
-          <div className="min-w-[100px] max-w-[150px] min-h-[127px]">
-            <img
-              className="w-full h-full object-cover"
-              src={ImgGaming}
-              alt="retro gaming"
-            />
-          </div>
-          <div className="ml-2">
-            <p className="font-bold text-[32px] leading-none text-neutral-grayishBlue">
-              03
-            </p>
-            <p className="font-extrabold text-[18px] leading-[24px] text-neutral-darkBlue hover:cursor-pointer hover:text-primary-softRed">
-              The Growth of Gaming
-            </p>
-            <p className="font-normal text-[15px] leading-[26px] text-neutral-darkGrayishBlue">
-              How the pandemic has sparked fresh opportunities.
-            </p>
-          </div>
-        </div>
+          );
+        })}
       </main>
     </div>
   );
