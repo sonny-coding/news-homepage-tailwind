@@ -18,7 +18,7 @@ This is a solution to the [News homepage challenge on Frontend Mentor](https://w
 ### Links
 
 - Solution URL: [Single-page design portfolio](https://github.com/sonny-coding/news-homepage-tailwind)
-- Live Site URL:
+- Live Site URL: [Vercel](https://news-homepage-tailwind.vercel.app/)
 
 ### Built with
 
